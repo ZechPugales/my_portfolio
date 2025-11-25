@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta setup for encoding, viewport, and compatibility -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO meta tags using Schema.org properties -->
+    <meta itemprop="name" content="Nathan Zech Pugales's Portfolio">
+    <meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+    <meta itemprop="image" content="assets/images/sharing-card.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicons.png" type="image/png" />
+
+    <!-- Preloading custom font to improve page load performance -->
+    <link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Linking main CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Linking JavaScript file with defer to avoid blocking HTML parsing -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Document title -->
+    <title>Nathan Zech Pugales's Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Immediately apply saved theme (dark/light) from localStorage -->
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <!-- Header Section: includes navigation menu and hero text -->
+    <header class="header">
+      <!-- Hamburger menu button container -->
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button" class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <!-- Navigation bar (hidden by default for mobile) -->
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item"><a href="#contact" data-focused="last-focused">Contact</a></li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <!-- Hero / introduction text box -->
+        <div class="header-textbox">
+          <h1 class="h1">
+            <span>Hey there! I'm Nathan Zech Pugales</span>
+            <span>A Frontend Web Developer</span>
+          </h1>
+          <p class="header-text">
+            A frontend software engineer and interface designer who builds UX
+            rich accessible and performant websites.
+          </p>
+
+          <!-- Call-to-action buttons -->
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me!</a>
+            <a href="#work" class="btn btn-secondary">Check me out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Client / Trusted By Section -->
+      <section class="client">
+        <div class="container">
+          <h2 class="h2">Approved and Trusted by</h2>
+          <div class="logos">
+            <!-- Multiple groups of logos for responsive layout -->
+            <div class="logo-group">
+              <img loading="lazy" src="assets/images/trusted-by/stripe.svg" alt="Ideacraft" class="logo hide to-top" />
+              <img loading="lazy" src="assets/images/trusted-by/datastax.svg" alt="Golden grid" class="logo" />
+              <img loading="lazy" src="assets/images/trusted-by/coke.svg" alt="Theia" class="logo hide to-bottom" />
+            </div>
+            <div class="logo-group">
+              <img loading="lazy" src="assets/images/trusted-by/gm.svg" alt="General motors" class="logo hide to-top" />
+              <img loading="lazy" src="assets/images/trusted-by/shares.svg" alt="Chippy" class="logo" />
+              <img loading="lazy" src="assets/images/trusted-by/shopify.svg" alt="Shopify" class="logo hide to-bottom" />
+            </div>
+            <div class="logo-group">
+              <img loading="lazy" src="assets/images/trusted-by/agency-elevation.svg" alt="Agency elevation" class="logo hide to-top" />
+              <img loading="lazy" src="assets/images/trusted-by/gitlab.svg" alt="Ron jones" class="logo" />
+              <img loading="lazy" src="assets/images/trusted-by/duolingo.svg" alt="Mighty furniture's" class="logo hide to-bottom" />
+            </div>
+            <div class="logo-group">
+              <img loading="lazy" src="assets/images/trusted-by/coyote.svg" alt="Bulls eye" class="logo hide to-top" />
+              <img loading="lazy" src="assets/images/trusted-by/astrato.svg" alt="Chippy" class="logo" />
+              <img loading="lazy" src="assets/images/trusted-by/mercado.svg" alt="Fastlane" class="logo hide to-bottom" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work / Portfolio Section -->
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Featured Creations</h2>
+          <div class="work-boxes">
+
+            <!-- Each work-box represents a featured project -->
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Pixel Art Tekken Characters</h3>
+                <p class="work-text">
+                  I created a series of pixel art sprites inspired by Tekken 8 characters. Each sprite captures unique fighting poses and expressions in a retro style.
+                </p>
+                <ol class="work-technologies">
+                  <li>Procreate</li>
+                  <li>iPad Pro</li>
+                  <li>Pixel Art Techniques</li>
+                </ol>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/tekken-sprites.png" alt="Pixel Art Tekken Characters" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Interactive Web Music Player</h3>
+                <p class="work-text">
+                  A fun browser-based music player that syncs animations to beats. Built as a playground for experimenting with audio visualization and dynamic UI interactions.
+                </p>
+                <ol class="work-technologies">
+                  <li>HTML & CSS</li>
+                  <li>JavaScript</li>
+                  <li>Web Audio API</li>
+                  <li>GSAP Animations</li>
+                </ol>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/music-player.png" alt="Interactive Web Music Player" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Mini Game Mod: Tekken 8 Stage Editor</h3>
+                <p class="work-text">
+                  A personal mod project allowing players to design custom stages for Tekken 8. Includes drag-and-drop elements, interactive backgrounds, and unique character placement.
+                </p>
+                <ol class="work-technologies">
+                  <li>C#</li>
+                  <li>Unity</li>
+                  <li>3D Modeling Basics</li>
+                  <li>UI Design</li>
+                </ol>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/tekken-stage-editor.jpg" alt="Tekken 8 Stage Editor Mod" />
+              </picture>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+            <!-- Showcases tech stack visually -->
+            <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+            <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+            <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+            <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+            <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <!-- Each testimonial is semantically structured with blockquote and figure -->
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Working with Nathan was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img src="assets/images/testimonials/rich-harris.png" alt="Rich Harris" loading="lazy" />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Harris Kareem</h3>
+                  <p class="testimonial-author-job">Developer @Outlets</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Nathan is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img src="assets/images/testimonials/frank-mcsherry.webp" alt="Andrew Mead" loading="lazy" />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Andrew Mead</h3>
+                  <p class="testimonial-author-job">Chief Scientist @Logos</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Talented artist, experienced with various media and can make any project look good. Easy to work with and self-starter. Would work with Nathan again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img src="assets/images/testimonials/brian-hirsh.png" alt="Brian Hirsh" loading="lazy" />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
+                  <p class="testimonial-author-job">Head @Zero-in</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send me a message!</h2>
+          <div class="contact-content inverted">
+            <!-- Contact Form -->
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required inputmode="email" />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Submit</button>
+            </form>
+
+            <!-- Info Box / Additional contact info -->
+            <div class="contact-textbox">
+              <strong class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design systems with a special love for accessibility and performance. I tend to code things from scratch and enjoy bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also a professional Tekken 8 player, and in my spare time, I do Tekken related projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <nav>
+              <ol class="footer-links">
+                <li class="footer-link">
+                  <a title="GitHub" href="#" target="_blank" rel="noopener">
+                    <img loading="lazy" src="assets/images/social-links/github.svg" alt="GitHub" />
+                  </a>
+                </li>
+                <li class="footer-link">
+                  <a title="LinkedIn" href="#" target="_blank" rel="noopener">
+                    <img loading="lazy" src="assets/images/social-links/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                </li>
+                <li class="footer-link">
+                  <a title="Twitter" href="#" target="_blank" rel="noopener">
+                    <img loading="lazy" src="assets/images/social-links/twitter.svg" alt="Twitter" />
+                  </a>
+                </li>
+              </ol>
+            </nav>
+            <p class="footer-text">
+              &copy; <span>2025</span> - Designed & developed by <a href="#" target="_blank" rel="noopener">Nathan Zech Pugales</a>
+            </p>
+            <!-- Theme switch toggle -->
+            <label class="theme-switch" for="theme-switch">
+              <span>Dark Theme</span>
+              <input type="checkbox" id="theme-switch" role="switch"/>
+            </label>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
